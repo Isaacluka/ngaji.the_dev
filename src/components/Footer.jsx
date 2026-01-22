@@ -10,12 +10,12 @@ const Footer = () => {
         
         <div className="socials flex justify-center items-center gap-6">
             {/* Instagram Icon */}
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/ngaji.the_dev/" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={20} color="#E4405F" /> {/* Customize size and color with props or CSS */}
             </a>
 
             {/* GitHub Icon */}
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Isaacluka/" target="_blank" rel="noopener noreferrer">
             <FaGithub size={20} color="#333" />
             </a>
 
