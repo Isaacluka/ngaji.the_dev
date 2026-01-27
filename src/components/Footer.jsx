@@ -1,12 +1,16 @@
 import React from 'react'
 import { FaInstagram, FaGithub } from 'react-icons/fa';
+import SlashLogo from './SlashLogo';
+
+
 
 const Footer = () => {
   return (
-    <div className='footer flex flex-col md:flex-row justify-between items-center gap-6 py-10 px-5 lg:px-20 text-center'>
-        <p>/ngaji.the_dev</p>
+    <div className='footer border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 py-10 px-5 lg:px-40 text-center'>
+     
+        <p className='text-blue font-mono'><span className='flex gap-2 justify-center items-center'> <SlashLogo size={18} /> ngaji.the_dev </span></p>
 
-        <p>&copy; 2026 Built with precision by ngaji.the_dev</p>
+        <p className='text-slate-500 text-sm font-mono'>&copy; 2026 Built with precision by ngaji.the_dev</p>
         
         <div className="socials flex justify-center items-center gap-6">
             {/* Instagram Icon */}
@@ -18,6 +22,8 @@ const Footer = () => {
             <a href="https://github.com/Isaacluka/" target="_blank" rel="noopener noreferrer">
             <FaGithub size={20} color="#333" />
             </a>
+
+            
 
         </div>
     </div>

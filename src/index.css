@@ -1,5 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Charmonman:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 
+@theme {
+  --font-mono: "Jetbrains Mono", "monospace";
+  --font-family: "Inter", "sans-serif";
+  --color-primary: #135bec;
+  --color-blue: #135bec;
+}
+
+body {
+  background-color: #0a0a0a;
+  font-family: var(--font-family);
+}
+.highlighted{
+  border: .1rem solid #136bec;
+  position: relative;
+}
+.highlighted .button {
+  background: #136bec;
+}
+.highlightTag{
+  position: absolute;
+  top: 12px;
+}
+.glass-nav {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.hero-glow {
+  background: radial-gradient(circle at center, rgba(19, 91, 236, 0.15) 0%, rgba(10, 10, 10, 0) 70%);
+}
 
 /*:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
