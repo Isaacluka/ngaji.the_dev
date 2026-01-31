@@ -1,4 +1,10 @@
-export const navbar = ['About', 'Portfolio', 'Pricing', 'Contact'];
+import Portfolio1 from '../assets/Portfolio1.png';
+export const navbar = [
+   {label:'About' , id:'about'}, 
+   {label:'Portfolio', id:'portfolio'},
+   {label:'Pricing', id:'pricing'},
+   {label: 'Contact', id:'contact'}
+];
 
 export const pricingList = [
     {
@@ -36,3 +42,25 @@ export const pricingList = [
        ]
     }
 ]
+
+export const Slides = [
+   { 
+      id: 1, 
+      color: "bg-red-400",
+      image: Portfolio1,
+      header: "Ngaji The Dev",
+      text:"A responsive portfolio website developed using React and Tailwind CSS, designed to highlight my work as a web developer through a clean, modern UI and smooth user experience." 
+   },
+  {   
+      id: 2, 
+      color: "bg-blue-400",
+      header: "Ngaji The Dev", 
+      text: "Slide 2" 
+   },
+  { 
+      id: 3, 
+      color: "bg-green-400",
+      header: "Ngaji The Dev", 
+      text: "Slide 3" 
+   },
+];

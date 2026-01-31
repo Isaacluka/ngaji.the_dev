@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import Carousel from './Carousel'
 
 
 
-const HeroSection = () => {
-  const [open, setOpen] = useState(false);
+const HeroSection = ({isOpen, setOpen }) => {
+//   const [open, setOpen] = useState(false);
 
 //   useEffect(() => {
 //     if (open) {
@@ -42,22 +43,23 @@ const HeroSection = () => {
     
         </div>
 
-        {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md bg-black/40"
+        {isOpen && (
+        <div id='portfolio' className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md bg-black/40"
             onClick={() => setOpen(false)} // clicking outside closes modal
         >
         <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 w-[90%] h-[80%] max-w-4xl shadow-2xl relative"
             onClick={(e) => e.stopPropagation()} // stop closing when clicking inside
             >
             {/* Modal content here */}
-            <div className='absolute top-4 right-6 hover:border hover:border-red-500 rounded-lg' onClick={() => setOpen(false)}><CloseIcon /></div>
-            <h2 className="text-white text-3xl font-bold mb-4">My Portfolio</h2>
-            <p className="text-white/90">Showcase your projects here.</p>
+            <div className='absolute top-4 right-6 rounded-lg' onClick={() => setOpen(false)}><CloseIcon /></div>
+            <h2 className="text-white text-sm text-primary font-bold mb-4">My Portfolio</h2>
+            {/* <p className="text-white/90">Showcase your projects here.</p> */}
+            <Carousel className=' absolute w-full h-auto' />
             </div>
         </div>
         )}
 
-        <div className="imgSection  relative group  w-full lg:w-1/2 h-full">
+        <div className="imgSection relative group  w-full lg:w-1/2 h-full">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-100 group-hover:duration-200">
             </div>
             <div className="relative bg-slate-900 border border-white/5 rounded-xl aspect-square overflow-hidden flex items-center justify-center">

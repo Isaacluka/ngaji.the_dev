@@ -6,12 +6,12 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 
 const Pricing = () => {
   return (
-    <div className='flex flex-col gap-6 justify-content-center items-center px-5 lg:px-40 py-20'>
+    <div id="pricing" className='flex flex-col gap-6 justify-content-center items-center px-5 lg:px-40 py-20'>
         <h1 className='text-3xl md:4xl lg:text-6xl text-center font-bold'>Investment Plans</h1>
         <p className='text-slate-400 text-center pb-6'>Choose a plan that fits your project needs. All plans include clean code and responsive layouts.</p>
-        <div className="priceCards flex flex-col lg:flex-row gap-6">
+        <div className="priceCards flex flex-col lg:flex-row gap-6 justify-center items-center">
             {pricingList.map((price)=>(
-                <div className={`p-8 bg-slate-900/30 w-full md:w-100 md:h-120 rounded-lg flex flex-col ${price.name === "Business" ? "highlighted relative" : ""}`} key={price}>
+                <div className={`p-8 bg-slate-900/30 w-full md:w-100 md:h-120 rounded-lg flex flex-col ${price.name === "Business" ? "highlighted relative md:w-110 md:h-130" : ""}`} key={price}>
                     {price.name === "Business" && (
                         <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary px-4 py-1 rounded-2xl text-sm font-semibold">
                             Most Popular

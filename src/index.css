@@ -12,6 +12,9 @@ body {
   background-color: #0a0a0a;
   font-family: var(--font-family);
 }
+html{
+  scroll-behavior: smooth;
+}
 .highlighted{
   border: .1rem solid #136bec;
   position: relative;
