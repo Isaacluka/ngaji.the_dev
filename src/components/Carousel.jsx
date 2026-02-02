@@ -5,6 +5,10 @@ import Portfolio1 from '../assets/Portfolio1.png';
 
 export default function Carousel() {
   const [isMobile, setIsMobile] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+
 
   useEffect(() => {
     const onResize = () => setIsMobile(window.innerWidth < 768);
@@ -17,6 +21,10 @@ export default function Carousel() {
     loop: true,
     slides: { perView: 1 }, // 👈 ALWAYS one slide
     drag: isMobile,         // 👈 swipe only on mobile
+
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
   });
 
   return (
@@ -26,16 +34,30 @@ export default function Carousel() {
           <div
             key={slide.id}
             className={"keen-slider__slide flex flex-col text-white text-2xl bg-contain bg-no-repeat md:object-[50%_30%]" }
+            onClick={() => window.open(`${slide.link}`, "_blank")}
+            style={{ cursor: "pointer" }}
           >
             <p className='justify-left py-6 font-bold'>{slide.header}</p> 
             <img src={slide.image} alt="" srcset=""  className=""/> 
             <p className="justify-left text-sm py-6">{slide.text}</p>
-
-            
-
           </div>
         ))}
       </div>
+      <div className="flex justify-center gap-2 mt-4">
+        {Slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => slider.current?.moveToIdx(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              currentSlide === index
+                ? "bg-blue-500 scale-125"
+                : "bg-gray-400"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
 
       {/* desktop navigation */}
       {!isMobile && (

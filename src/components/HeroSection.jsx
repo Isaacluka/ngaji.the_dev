@@ -56,6 +56,9 @@ const HeroSection = ({isOpen, setOpen }) => {
             <h2 className="text-white text-sm text-primary font-bold mb-4">My Portfolio</h2>
             {/* <p className="text-white/90">Showcase your projects here.</p> */}
             <Carousel className=' absolute w-full h-auto' />
+            <p>
+                
+            </p>
             </div>
         </div>
         )}
