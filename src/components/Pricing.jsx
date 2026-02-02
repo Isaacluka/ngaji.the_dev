@@ -1,6 +1,7 @@
 import React from 'react'
 import { pricingList } from '../constants'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle' 
+import { sendWhatsAppMessage } from '../constants'
 
 
 
@@ -20,7 +21,7 @@ const Pricing = () => {
  
                     <div className='text-lg pb-2'>{price.name}</div>
                     <div className='pb-2 text-3xl md:4xl lg:text-4xl font-extrabold'>{price.pricetag}<span className='text-slate-500 text-sm font-normal'>{price.pricetag === "Contact" ? ' Us' : '/project'}</span></div>
-                    <div className='button bg-white/5 hover:bg-primary border border-white/5 px-8 py-4 my-4 rounded-lg w-full active:scale-95 active:bg-primary flex items-center justify-center'>{price.buttontag}</div>
+                    <button className='button bg-white/5 hover:bg-primary border border-white/5 px-8 py-4 my-4 rounded-lg w-full active:scale-95 active:bg-primary flex items-center justify-center' onClick={() => sendWhatsAppMessage(`${price.name}`)}>{price.buttontag}</button>
                     <div>{price.services.map((service)=>(
                         <li className='list-none px-2 py-2' key={service}><span className="material-symbols-outlined text-primary text-sm pr-4"><CheckCircleIcon /></span>{service}</li>
                     ))}</div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { navbar } from '../constants'
 import SlashLogo from './SlashLogo';
+import { sendWhatsAppMessage } from '../constants';
 
 const NavBar = ({setOpen}) => {
     const handleNavClick = (id) => {
@@ -34,7 +35,7 @@ const NavBar = ({setOpen}) => {
                     </div>
                 ))}
             </div>
-            <button className="callToAction bg-blue hover:bg-blue/90 px-6 py-2 rounded-lg max-sm:hidden transition-all shadow-xl shadow-primary/30 active:scale-95">
+            <button className="callToAction bg-blue hover:bg-blue/90 px-6 py-2 rounded-lg max-sm:hidden transition-all shadow-xl shadow-primary/30 active:scale-95" onClick={() => sendWhatsAppMessage()}>
                 Hire Me
             </button>
         </nav>

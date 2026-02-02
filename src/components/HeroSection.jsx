@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import Carousel from './Carousel'
+import Carousel from './Carousel';
+import { sendWhatsAppMessage } from '../constants';
 
 
 
@@ -35,7 +36,7 @@ const HeroSection = ({isOpen, setOpen }) => {
         
             <div className="buttons flex flex-wrap gap-6">
         
-                <button className="callToAction bg-blue hover:bg-blue/90 px-8 py-4 rounded-lg flex-none w-auto transition-all shadow-xl shadow-primary/30 active:scale-95">Hire Me <span className="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1"><ArrowForwardIcon /></span></button>
+                <button className="callToAction bg-blue hover:bg-blue/90 px-8 py-4 rounded-lg flex-none w-auto transition-all shadow-xl shadow-primary/30 active:scale-95" onClick={() => sendWhatsAppMessage()}>Hire Me <span className="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1"><ArrowForwardIcon /></span></button>
         
                 <button className="projects bg-transparent hover:bg-white/5 border border-white/5 px-8 py-4 rounded-lg font-mono flex-none w-auto active:scale-95" onClick={() => setOpen(true)}>./view-projects</button>
         

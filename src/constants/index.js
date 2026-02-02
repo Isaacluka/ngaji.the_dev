@@ -64,3 +64,18 @@ export const Slides = [
       text: "Slide 3" 
    },
 ];
+
+export const sendWhatsAppMessage = (project = "") => {
+  const phoneNumber = "2349044646303"; // country code, no +
+
+  const projectType = project
+    ? `a *${project}* web project`
+    : `a web project`;
+
+  const message =
+    `Hello Ngaji, I came across your portfolio and I’m interested in working with you on ${projectType}. Can we talk about requirements and pricing?`;
+
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
