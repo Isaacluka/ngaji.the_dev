@@ -24,7 +24,7 @@ export const pricingList = [
     },
     {
        name: "Business",
-       pricetag: "$1499",
+       pricetag: "$1,499",
        buttontag: "Choose Business",
        services: [
         "Full E-commerce",
