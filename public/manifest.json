@@ -1,0 +1,20 @@
+{
+  "name": "Ngaji the Dev",
+  "short_name": "Ngaji",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0E3A7A",
+  "theme_color": "#0E3A7A",
+  "icons": [
+    {
+      "src": "/icons/ngaji_the_dev_icon_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/ngaji_the_dev_icon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
